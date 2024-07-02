@@ -1,0 +1,63 @@
+<!--
+  ***************************************************************
+  *  node-red-contrib-evm-monitoring                            *
+  *  Jesús Rosa Bilbao (jesus.rosa@uca.es) &                    *
+  *  Juan Boubeta Puig (juan.boubeta@uca.es)                    *
+  *  University of Cadiz                                        *
+  *                                                             *
+  ***************************************************************
+-->
+<script type="text/javascript">
+
+  RED.nodes.registerType('contract-address-subscription', {
+    category: 'EVM',
+    color: '#a7c6f7',
+    defaults: {
+      name: { value: undefined },
+      evmblockchainconfig: { type: 'evm-blockchain-config', required: true },
+      addressconfig: { type: 'address-config', required: true }
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: 'Ethereum_logo.png',
+    align: 'left',
+    paletteLabel: 'contract-address-subscription',
+    hasValue: true,
+    label: function() {
+      return this.name || 'Contract_Address Subscription';
+    }
+  });
+</script>
+<style>
+  h4.section {
+    border-bottom: 1px solid #bbb;
+    margin: 1em 0em 1em 0em;
+  }
+</style>
+<script type="text/x-red" data-template-name="contract-address-subscription">
+    <h4 class="section">General</h4>
+
+    <div class="form-row">
+        <label for="node-input-name"> Name [optional]</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <h4 class="section">EVM</h4>
+    <div class="form-row">
+        <label for="node-input-evmblockchainconfig"> Configuration </label>
+        <input type="text" id="node-input-evmblockchainconfig">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-addressconfig"> Public Address </label>
+        <input type="text" id="node-input-addressconfig">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="contract-address-subscription">
+  <p>Allows listening in real time to new transactions taking place on a specific contract on the EVM blockchain network specified in the configuration.</p>
+  <ul>
+    <li><b>EVM Configuration:</b> Select the configuration node where the network is specified.</li>
+    <li><b>Public Address:</b> Select the configuration node where the public address is specified.</li>
+  </ul>
+</script>

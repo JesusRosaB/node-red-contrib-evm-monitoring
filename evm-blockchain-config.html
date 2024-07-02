@@ -1,0 +1,43 @@
+<!--
+  ***************************************************************
+  *  node-red-contrib-evm-monitoring                            *
+  *  Jesús Rosa Bilbao (jesus.rosa@uca.es) &                    *
+  *  Juan Boubeta Puig (juan.boubeta@uca.es)                    *
+  *  University of Cadiz                                        *
+  *                                                             *
+  ***************************************************************
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('evm-blockchain-config', {
+        category: 'config',
+        defaults: {
+            name: {value: undefined, required: false},
+            network: { value: '', required: true }
+        },
+        label: function() {
+            return this.name || this.network;
+        },
+        oneditprepare: function() {
+            $('#node-config-input-network').val(this.network);
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="evm-blockchain-config">
+    <div class="form-row">
+        <label for="node-config-input-name"> Name </label>
+        <input type="text" id="node-config-input-name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-config-input-network"><i class="fa fa-plug"></i> Network </label>
+        <input type="text" id="node-config-input-network">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="evm-blockchain-config">
+    <p> Configuration of the blockchain network. </p>
+    <ul>
+      <li><b>Network: </b>Indicates the blockchain network you wish to connect to. To do this, specify the endpoint of the corresponding network, which you can obtain from various providers such as Infura.</li>
+    </ul>
+</script>

@@ -1,0 +1,85 @@
+<!--
+  ***************************************************************
+  *  node-red-contrib-evm-monitoring                            *
+  *  Jesús Rosa Bilbao (jesus.rosa@uca.es) &                    *
+  *  Juan Boubeta Puig (juan.boubeta@uca.es)                    *
+  *  University of Cadiz                                        *
+  *                                                             *
+  ***************************************************************
+-->
+<script type="text/javascript">
+
+  RED.nodes.registerType('get-transaction-details', {
+    category: 'EVM',
+    color: '#7eafd2',
+    defaults: {
+      name: { value: undefined },
+      evmblockchainconfig: { type: 'evm-blockchain-config', required: true },
+      detail: { value: undefined}
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: 'Ethereum_logo.png',
+    align: 'left',
+    paletteLabel: 'get-transaction-details',
+    hasValue: true,
+    label: function() {
+      return this.name || 'Get Transaction Details';
+    }
+    
+
+  });
+</script>
+<style>
+  h4.section {
+    border-bottom: 1px solid #bbb;
+    margin: 1em 0em 1em 0em;
+  }
+</style>
+<script type="text/x-red" data-template-name="get-transaction-details">
+
+    <h4 class="section">General</h4>
+
+    <div class="form-row">
+        <label for="node-input-name"> Name [optional]</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <h4 class="section">EVM</h4>
+    <div class="form-row">
+        <label for="node-input-evmblockchainconfig"> Configuration </label>
+        <input type="text" id="node-input-evmblockchainconfig">
+    </div>
+
+    <h4 class="section">What detail do you want to obtain?</h4>
+    <div class="form-row">
+        <label for="node-input-detail"> Detail </label>
+        <select id="node-input-detail">
+          <option value="blockhash">Block Hash</option>
+          <option value="blocknumber">Block Number</option>
+          <option value="from">From Address</option>
+          <option value="gas">Gas</option>
+          <option value="gasprice">Gas Price</option>
+          <option value="hash">Hash</option>
+          <option value="input">Input</option>
+          <option value="nonce">Nonce</option>
+          <option value="r">R</option>
+          <option value="s">S</option>
+          <option value="to">To Address</option>
+          <option value="transactionindex">Transaction Index</option>
+          <option value="type">Type</option>
+          <option value="v">V</option>
+          <option value="value">Value</option>
+          <option value="alldetails">All Details</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get-transaction-details">
+  <p>Allows to obtain specific information of a transaction from its hash within the EVM blockchain network specified in the configuration.</p>
+  <ul>
+    <li><b>Input: </b>Transaction hash to get the desired detail.</li>
+    <li><b>EVM Configuration:</b> Select the configuration node where the network is specified.</li>
+    <li><b>Detail:</b> Select the information you wish to obtain from the transactions provided.</li>
+  </ul>
+</script>

@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-evm-monitoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node-blogk-log-listener.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesus Rosa Bilbao",
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "evm-blockchain-config": "evm-blockchain-config.js",
+      "address-config": "address-config.js",
+      "node-block-log-listener": "node-block-log-listener.js",
+      "node-transaction-listener": "node-transaction-listener.js",
+      "node-transaction-hash-listener": "node-transaction-hash-listener.js",
+      "node-get-transaction-details": "node-get-transaction-details.js",
+      "node-contract-address-subscription": "node-contract-address-subscription.js",
+      "node-fromaddress-subscription": "node-fromaddress-subscription.js",
+      "node-toaddress-subscription": "node-toaddress-subscription.js",
+      "node-get-block-details": "node-get-block-details.js"
+    }
+  },
+  "dependencies": {
+    "web3": "^1.3.4",
+    "node-fetch": "^2.6.1"
+  }
+}
