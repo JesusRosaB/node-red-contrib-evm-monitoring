@@ -8,6 +8,13 @@
   },
   "author": "Jesus Rosa Bilbao",
   "license": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+  "keywords": [
+    "node-red",
+    "blockchain",
+    "EVM",
+    "Ethereum",
+    "monitoring"
+  ],
   "node-red": {
     "nodes": {
       "evm-blockchain-config": "evm-blockchain-config.js",
