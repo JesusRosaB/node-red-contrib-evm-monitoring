@@ -5,14 +5,14 @@ node-red-contrib-evm-monitoring is a package that bundles a set of Node-RED node
 
 Currently, there are eight nodes implemented:
 
- - node-block-log-listener: listener that allows listening to new blocks being mined in real time on the configured blockchain network.
+ - node-block-log-listener: it allows listening to new blocks being mined in real time on the configured blockchain network.
  - node-contract-address-subscription: listener allowing to subscribe to listen for new transactions from the address of the smart contract configured for the configured blockchain network.
- - node-fromaddress-subscription: listener that allows listening to new transactions that are mined in real time on the configured blockchain network and whose origin is the configured address. Please note that this address can be the address of a user or a smart contract.
+ - node-fromaddress-subscription: it allows listening to new transactions that are mined in real time on the configured blockchain network and whose origin is the configured address. Please note that this address can be the address of a user or a smart contract.
  - node-get-block-details: allows to obtain specific details of a block already mined in the configured blockchain network from the block hash or block number.
  - node-get-transaction-details: allows to obtain specific details of a transaction already mined in the configured blockchain network from the hash of the transaction.
- - node-toaddress-subscription: listener that allows listening to new transactions that are mined in real time on the configured blockchain network and whose destination is the configured address. Please note that this address can be the address of a user or a smart contract.
+ - node-toaddress-subscription: it allows listening to new transactions that are mined in real time on the configured blockchain network and whose destination is the configured address. Please note that this address can be the address of a user or a smart contract.
  - node-transaction-hash-listener: listener that allows to obtain the hash of new transactions that are mined in real time in the configured blockchain network. 
- - node-transaction-listener: listener that allows you to listen to new transactions being mined in real time on the configured blockchain network. 
+ - node-transaction-listener: it allows listening to new transactions being mined in real time on the configured blockchain network. 
 
 Installation
 ------
