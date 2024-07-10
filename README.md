@@ -3,7 +3,7 @@ node-red-contrib-evm-monitoring
 
 node-red-contrib-evm-monitoring is a package that bundles a set of Node-RED nodes that can be used to monitor EVM-compatible blockchain networks. 
 
-Currently, there are five eight implemented:
+Currently, there are eight nodes implemented:
 
  - node-block-log-listener: listener that allows listening to new blocks being mined in real time on the configured blockchain network.
  - node-contract-address-subscription: listener allowing to subscribe to listen for new transactions from the address of the smart contract configured for the configured blockchain network.
